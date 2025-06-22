@@ -14,7 +14,7 @@ Quando ele clica no link "Esqueci minha senha"
      ir para a pagina de reuperar senha
 #E
 E não se lembra da sua senha
-   preencher campo email    isaias.legend@gmail.com
+   preencher campo email    perfilteste1@gmail.com
 #ENTÃO
 Então o sistema deve direcioná-lo para a tela de recuperação de senha
     Validar Que Estou Na Pagina    https://only-cursos.vercel.app/recuperar-senha         

@@ -1,5 +1,6 @@
 *** Settings ***
 Library        SeleniumLibrary
+Library    JSONLibrary
 Library    XML
 Resource        ../variables/GlobalVariables.resource
 *** Keywords ***
@@ -20,3 +21,13 @@ Deslogar usuario
 Validar Que Estou Na Pagina
     [Arguments]    ${url_da_pagina}
     Wait Until Keyword Succeeds    10s    1s    Location Should Be    ${url_da_pagina}
+
+acessar tela Meus dados
+    Wait Until Element Is Visible  ${Menu_Meus_Dados}
+    Click Element    ${Menu_Meus_Dados}
+Carregar Credenciais
+    [Arguments]    ${perfil}    ${campo}
+    ${json}=    Load Json From File    ${CAMINHO_JSON}
+    ${usuario_dados}=    Get Value From Json    ${json}    ${perfil}
+    ${resultado}=    Get Value From Json    ${usuario_dados}    ${campo}
+    [Return]    ${resultado}

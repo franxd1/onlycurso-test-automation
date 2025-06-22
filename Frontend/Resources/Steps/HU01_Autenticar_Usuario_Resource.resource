@@ -12,7 +12,7 @@ Dado que o usuário esta na página de login
     Validar Que Estou Na Pagina    https://only-cursos.vercel.app/login
 #QUANDO
 Quando o usuário preenche o campo de e-mail com "isaias.legend@gmail.com"
-    preencher campo email    isaias.legend@gmail.com
+    preencher campo email    perfilteste1@gmail.com
 
 Quando o usuário preenche o campo de e-mail com "naoexiste@exemplo.com"
     preencer dados de email invalidos
@@ -23,7 +23,7 @@ E clica no botão "Entrar"
     logar
 
 E preenche o campo de senha com "Isaias123@"
-    preencher campo senha    Isaias123@
+    preencher campo senha    perfilteste1@
     
 E preenche o campo de senha com "QualquerSenha123"
     preencher campo senha com senha invalida

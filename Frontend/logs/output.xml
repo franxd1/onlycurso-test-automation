@@ -1,0 +1,1233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.1.1 (Python 3.13.1 on win32)" generated="2025-06-22T04:57:18.382524" rpa="false" schemaversion="5">
+<suite id="s1" name="Tests" source="C:\Users\Helio\Desktop\Estudos\Python\Only-Cursos\frontend\Tests">
+<suite id="s1-s1" name="HU01 Autenticar Usuario" source="C:\Users\Helio\Desktop\Estudos\Python\Only-Cursos\frontend\Tests\HU01_Autenticar_Usuario.robot">
+<kw name="Abrir Navegador" owner="CommosResource" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-06-22T04:57:19.013537" level="INFO">Opening browser 'chrome' to base url 'https://only-cursos.vercel.app/'.</msg>
+<arg>${LinkNavegador}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-06-22T04:57:19.013251" elapsed="6.380392"/>
+</kw>
+<status status="PASS" start="2025-06-22T04:57:19.012463" elapsed="6.384720"/>
+</kw>
+<test id="s1-s1-t1" name="CN1 - Login com credenciais válidas" line="7">
+<kw name="Dado que o usuário acessa a página de login" owner="HU01_Autenticar_Usuario_Resource">
+<kw name="acessar login" owner="CommosResource">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${BotaoEntrar}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-06-22T04:57:25.443732" elapsed="0.261253"/>
+</kw>
+<kw name="Set Focus To Element" owner="SeleniumLibrary">
+<arg>${BotaoEntrar}</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-22T04:57:25.705308" elapsed="0.103875"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-06-22T04:57:25.809867" level="INFO">Clicking element 'xpath=/html/body/div/nav/div[1]/ul/li[4]/a'.</msg>
+<arg>${BotaoEntrar}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-22T04:57:25.809498" elapsed="0.789204"/>
+</kw>
+<status status="PASS" start="2025-06-22T04:57:25.443065" elapsed="1.156013"/>
+</kw>
+<status status="PASS" start="2025-06-22T04:57:25.442395" elapsed="1.156865"/>
+</kw>
+<kw name="Quando o usuário preenche o campo de e-mail com &quot;isaias.legend@gmail.com&quot;" owner="HU01_Autenticar_Usuario_Resource">
+<kw name="preencher campo email" owner="CommosResource">
+<kw name="Set Focus To Element" owner="SeleniumLibrary">
+<arg>${Login_Input_Email}</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-22T04:57:26.602477" elapsed="0.099327"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-22T04:57:26.704332" level="INFO">Typing text 'perfilteste1@gmail.com' into text field 'xpath=/html/body/div/div/form/div[1]/input'.</msg>
+<arg>${Login_Input_Email}</arg>
+<arg>${Email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-22T04:57:26.703849" elapsed="0.306881"/>
+</kw>
+<arg>perfilteste1@gmail.com</arg>
+<status status="PASS" start="2025-06-22T04:57:26.601827" elapsed="0.409231"/>
+</kw>
+<status status="PASS" start="2025-06-22T04:57:26.601269" elapsed="0.409988"/>
+</kw>
+<kw name="E preenche o campo de senha com &quot;Isaias123@&quot;" owner="HU01_Autenticar_Usuario_Resource">
+<kw name="preencher campo senha" owner="HU01_Autenticar_Usuario_Resource">
+<kw name="Set Focus To Element" owner="SeleniumLibrary">
+<arg>${Login_Input_Email}</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-22T04:57:27.019147" elapsed="0.022895"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-22T04:57:27.042779" level="INFO">Typing text 'perfilteste1@' into text field 'xpath=//*[@id="senha"]'.</msg>
+<arg>${Login_Input_Senha}</arg>
+<arg>${Senha}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-22T04:57:27.042359" elapsed="0.165112"/>
+</kw>
+<arg>perfilteste1@</arg>
+<status status="PASS" start="2025-06-22T04:57:27.018606" elapsed="0.189128"/>
+</kw>
+<status status="PASS" start="2025-06-22T04:57:27.017797" elapsed="0.190061"/>
+</kw>
+<kw name="E clica no botão &quot;Entrar&quot;" owner="HU01_Autenticar_Usuario_Resource">
+<kw name="logar" owner="HU01_Autenticar_Usuario_Resource">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-06-22T04:57:27.210206" level="INFO">Clicking element 'xpath=/html/body/div/div/form/button'.</msg>
+<arg>${Login_Botao_Entrar}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-22T04:57:27.209686" elapsed="0.112917"/>
+</kw>
+<status status="PASS" start="2025-06-22T04:57:27.209073" elapsed="0.113706"/>
+</kw>
+<status status="PASS" start="2025-06-22T04:57:27.208474" elapsed="0.114406"/>
+</kw>
+<kw name="Então o sistema deve redirecionar o usuário para a Página Inicial" owner="HU01_Autenticar_Usuario_Resource">
+<kw name="Validar Que Estou Na Pagina" owner="CommosResource">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2025-06-22T04:57:27.560443" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-203.png"&gt;&lt;img src="selenium-screenshot-203.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-06-22T04:57:27.560770" level="FAIL">Location should have been 'https://only-cursos.vercel.app/aluno' but was 'https://only-cursos.vercel.app/login'.</msg>
+<arg>${url_da_pagina}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="FAIL" start="2025-06-22T04:57:27.325736" elapsed="0.238477">Location should have been 'https://only-cursos.vercel.app/aluno' but was 'https://only-cursos.vercel.app/login'.</status>
+</kw>
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2025-06-22T04:57:28.573065" level="INFO">Current location is 'https://only-cursos.vercel.app/aluno'.</msg>
+<arg>${url_da_pagina}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2025-06-22T04:57:28.565007" elapsed="0.008191"/>
+</kw>
+<arg>10s</arg>
+<arg>1s</arg>
+<arg>Location Should Be</arg>
+<arg>${url_da_pagina}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2025-06-22T04:57:27.324714" elapsed="1.248616"/>
+</kw>
+<arg>https://only-cursos.vercel.app/aluno</arg>
+<status status="PASS" start="2025-06-22T04:57:27.324323" elapsed="1.249162"/>
+</kw>
+<kw name="Deslogar usuario" owner="CommosResource">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-06-22T04:57:28.574364" level="INFO">Clicking element 'xpath=/html/body/div/div/nav/div/div[2]/button'.</msg>
+<arg>${Home_Botao_Sair}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-22T04:57:28.574094" elapsed="0.192915"/>
+</kw>
+<status status="PASS" start="2025-06-22T04:57:28.573733" elapsed="0.193419"/>
+</kw>
+<status status="PASS" start="2025-06-22T04:57:27.323718" elapsed="1.443525"/>
+</kw>
+<status status="PASS" start="2025-06-22T04:57:25.399424" elapsed="3.368205"/>
+</test>
+<test id="s1-s1-t2" name="CN2 - Login com e-mail não cadastrado" line="13">
+<kw name="Dado que o usuário esta na página de login" owner="HU01_Autenticar_Usuario_Resource">
+<kw name="Validar Que Estou Na Pagina" owner="CommosResource">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2025-06-22T04:57:28.788925" level="INFO">Current location is 'https://only-cursos.vercel.app/login'.</msg>
+<arg>${url_da_pagina}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2025-06-22T04:57:28.770880" elapsed="0.018213"/>
+</kw>
+<arg>10s</arg>
+<arg>1s</arg>
+<arg>Location Should Be</arg>
+<arg>${url_da_pagina}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2025-06-22T04:57:28.770585" elapsed="0.018673"/>
+</kw>
+<arg>https://only-cursos.vercel.app/login</arg>
+<status status="PASS" start="2025-06-22T04:57:28.770216" elapsed="0.019678"/>
+</kw>
+<status status="PASS" start="2025-06-22T04:57:28.769631" elapsed="0.020489"/>
+</kw>
+<kw name="Quando o usuário preenche o campo de e-mail com &quot;naoexiste@exemplo.com&quot;" owner="HU01_Autenticar_Usuario_Resource">
+<kw name="preencer dados de email invalidos" owner="HU01_Autenticar_Usuario_Resource">
+<kw name="Set Focus To Element" owner="SeleniumLibrary">
+<arg>${Login_Input_Email}</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-22T04:57:28.793254" elapsed="0.022695"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-22T04:57:28.817332" level="INFO">Typing text 'naoexiste@exemplo.com' into text field 'xpath=/html/body/div/div/form/div[1]/input'.</msg>
+<arg>${Login_Input_Email}</arg>
+<arg>naoexiste@exemplo.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-22T04:57:28.816871" elapsed="0.137559"/>
+</kw>
+<status status="PASS" start="2025-06-22T04:57:28.791157" elapsed="0.163501"/>
+</kw>
+<status status="PASS" start="2025-06-22T04:57:28.790722" elapsed="0.164245"/>
+</kw>
+<kw name="E preenche o campo de senha com &quot;QualquerSenha123&quot;" owner="HU01_Autenticar_Usuario_Resource">
+<kw name="preencher campo senha com senha invalida" owner="HU01_Autenticar_Usuario_Resource">
+<kw name="Set Focus To Element" owner="SeleniumLibrary">
+<arg>${Login_Input_Email}</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-22T04:57:28.956820" elapsed="0.015295"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-22T04:57:28.972535" level="INFO">Typing text 'QualquerSenha123' into text field 'xpath=//*[@id="senha"]'.</msg>
+<arg>${Login_Input_Senha}</arg>
+<arg>QualquerSenha123</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-22T04:57:28.972302" elapsed="0.110338"/>
+</kw>
+<status status="PASS" start="2025-06-22T04:57:28.956457" elapsed="0.126614"/>
+</kw>
+<status status="PASS" start="2025-06-22T04:57:28.955917" elapsed="0.127351"/>
+</kw>
+<kw name="E clica no botão &quot;Entrar&quot;" owner="HU01_Autenticar_Usuario_Resource">
+<kw name="logar" owner="HU01_Autenticar_Usuario_Resource">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-06-22T04:57:29.085095" level="INFO">Clicking element 'xpath=/html/body/div/div/form/button'.</msg>
+<arg>${Login_Botao_Entrar}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-22T04:57:29.084875" elapsed="0.080152"/>
+</kw>
+<status status="PASS" start="2025-06-22T04:57:29.084511" elapsed="0.080959"/>
+</kw>
+<status status="PASS" start="2025-06-22T04:57:29.083976" elapsed="0.081770"/>
+</kw>
+<kw name="Então o sistema deve exibir a mensagem de erro &quot;Usuário ou senha inválidos&quot;" owner="HU01_Autenticar_Usuario_Resource">
+<kw name="Validar mensagem de erro" owner="HU01_Autenticar_Usuario_Resource">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Login_Mensagem_Credencias_invalidas}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-06-22T04:57:29.169020" elapsed="0.266198"/>
+</kw>
+<kw name="Set Focus To Element" owner="SeleniumLibrary">
+<arg>${Login_Mensagem_Credencias_invalidas}</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-22T04:57:29.435476" elapsed="0.016184"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-06-22T04:57:29.476280" level="INFO">${texto} = Credenciais inválidas.</msg>
+<var>${texto}</var>
+<arg>${Login_Mensagem_Credencias_invalidas}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-22T04:57:29.451871" elapsed="0.024543"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${texto}</arg>
+<arg>Credenciais inválidas.</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2025-06-22T04:57:29.476745" elapsed="0.000441"/>
+</kw>
+<status status="PASS" start="2025-06-22T04:57:29.168554" elapsed="0.309340"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-06-22T04:57:29.478399" elapsed="2.891742"/>
+</kw>
+<status status="PASS" start="2025-06-22T04:57:29.167985" elapsed="3.202646"/>
+</kw>
+<status status="PASS" start="2025-06-22T04:57:28.768763" elapsed="3.603598"/>
+</test>
+<status status="PASS" start="2025-06-22T04:57:18.425050" elapsed="13.951356"/>
+</suite>
+<suite id="s1-s2" name="HU02 Acessar Tela de Cadastro" source="C:\Users\Helio\Desktop\Estudos\Python\Only-Cursos\frontend\Tests\HU02_Acessar_Tela_de_Cadastro.robot">
+<kw name="Abrir Navegador" owner="CommosResource" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-06-22T04:57:32.409294" level="INFO">Opening browser 'chrome' to base url 'https://only-cursos.vercel.app/'.</msg>
+<arg>${LinkNavegador}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-06-22T04:57:32.409043" elapsed="2.573883"/>
+</kw>
+<status status="PASS" start="2025-06-22T04:57:32.408738" elapsed="2.574476"/>
+</kw>
+<test id="s1-s2-t1" name="CN01 - Navegação para o cadastro bem-sucedida" line="6">
+<kw name="Dado que o usuário acessa a pagina de login" owner="HU02_Acessar_Tela_de_Cadastro_Resource">
+<kw name="acessar login" owner="CommosResource">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${BotaoEntrar}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-06-22T04:57:35.000597" elapsed="2.760815"/>
+</kw>
+<kw name="Set Focus To Element" owner="SeleniumLibrary">
+<arg>${BotaoEntrar}</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-22T04:57:37.761752" elapsed="0.095946"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-06-22T04:57:37.858922" level="INFO">Clicking element 'xpath=/html/body/div/nav/div[1]/ul/li[4]/a'.</msg>
+<arg>${BotaoEntrar}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-22T04:57:37.858467" elapsed="0.630080"/>
+</kw>
+<status status="PASS" start="2025-06-22T04:57:34.999980" elapsed="3.488826"/>
+</kw>
+<status status="PASS" start="2025-06-22T04:57:34.999337" elapsed="3.489702"/>
+</kw>
+<kw name="E preenche o campo de email com &quot;perfilteste12025@gmail.com&quot;" owner="HU02_Acessar_Tela_de_Cadastro_Resource">
+<kw name="preencher campo email" owner="CommosResource">
+<kw name="Set Focus To Element" owner="SeleniumLibrary">
+<arg>${Login_Input_Email}</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-22T04:57:38.493529" elapsed="0.051516"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-22T04:57:38.545901" level="INFO">Typing text 'perfilteste12025@gmail.com' into text field 'xpath=/html/body/div/div/form/div[1]/input'.</msg>
+<arg>${Login_Input_Email}</arg>
+<arg>${Email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-22T04:57:38.545423" elapsed="0.314586"/>
+</kw>
+<arg>perfilteste12025@gmail.com</arg>
+<status status="PASS" start="2025-06-22T04:57:38.493082" elapsed="0.367139"/>
+</kw>
+<status status="PASS" start="2025-06-22T04:57:38.492534" elapsed="0.367834"/>
+</kw>
+<kw name="E preenche o campo de senha com &quot;perfilteste12025&quot;" owner="HU02_Acessar_Tela_de_Cadastro_Resource">
+<kw name="preencher campo senha" owner="HU01_Autenticar_Usuario_Resource">
+<kw name="Set Focus To Element" owner="SeleniumLibrary">
+<arg>${Login_Input_Email}</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-22T04:57:38.862061" elapsed="0.025998"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-22T04:57:38.889995" level="INFO">Typing text 'perfilteste12025' into text field 'xpath=//*[@id="senha"]'.</msg>
+<arg>${Login_Input_Senha}</arg>
+<arg>${Senha}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-22T04:57:38.889490" elapsed="0.259134"/>
+</kw>
+<arg>perfilteste12025</arg>
+<status status="PASS" start="2025-06-22T04:57:38.861592" elapsed="0.287291"/>
+</kw>
+<status status="PASS" start="2025-06-22T04:57:38.860972" elapsed="0.288065"/>
+</kw>
+<kw name="E não possui uma conta cadastrada" owner="HU02_Acessar_Tela_de_Cadastro_Resource">
+<kw name="logar" owner="HU01_Autenticar_Usuario_Resource">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-06-22T04:57:39.155094" level="INFO">Clicking element 'xpath=/html/body/div/div/form/button'.</msg>
+<arg>${Login_Botao_Entrar}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-22T04:57:39.154632" elapsed="0.107344"/>
+</kw>
+<status status="PASS" start="2025-06-22T04:57:39.154103" elapsed="0.108111"/>
+</kw>
+<kw name="Validar mensagem de erro" owner="HU01_Autenticar_Usuario_Resource">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Login_Mensagem_Credencias_invalidas}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-06-22T04:57:39.263970" elapsed="0.506903"/>
+</kw>
+<kw name="Set Focus To Element" owner="SeleniumLibrary">
+<arg>${Login_Mensagem_Credencias_invalidas}</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-22T04:57:39.771193" elapsed="0.017617"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-06-22T04:57:39.811765" level="INFO">${texto} = Credenciais inválidas.</msg>
+<var>${texto}</var>
+<arg>${Login_Mensagem_Credencias_invalidas}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-22T04:57:39.789067" elapsed="0.022747"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${texto}</arg>
+<arg>Credenciais inválidas.</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2025-06-22T04:57:39.812055" elapsed="0.000240"/>
+</kw>
+<status status="PASS" start="2025-06-22T04:57:39.262612" elapsed="0.549783"/>
+</kw>
+<status status="PASS" start="2025-06-22T04:57:39.153191" elapsed="0.659275"/>
+</kw>
+<kw name="Quando ele clica no link &quot;Cadastre-se&quot;" owner="HU02_Acessar_Tela_de_Cadastro_Resource">
+<kw name="ir para a pagina de cadastro" owner="HU02_Acessar_Tela_de_Cadastro_Resource">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-06-22T04:57:39.813811" level="INFO">Clicking element 'xpath=/html/body/div/div/div/p[2]/a'.</msg>
+<arg>${Login_link_para_Cadastro}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-22T04:57:39.813558" elapsed="0.315298"/>
+</kw>
+<status status="PASS" start="2025-06-22T04:57:39.813222" elapsed="0.316021"/>
+</kw>
+<status status="PASS" start="2025-06-22T04:57:39.812869" elapsed="0.316643"/>
+</kw>
+<kw name="Então o sistema deve direcioná-lo para a tela de criação de conta" owner="HU02_Acessar_Tela_de_Cadastro_Resource">
+<kw name="Validar Que Estou Na Pagina" owner="CommosResource">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2025-06-22T04:57:40.156811" level="INFO">Current location is 'https://only-cursos.vercel.app/cadastro'.</msg>
+<arg>${url_da_pagina}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2025-06-22T04:57:40.137187" elapsed="0.019797"/>
+</kw>
+<arg>10s</arg>
+<arg>1s</arg>
+<arg>Location Should Be</arg>
+<arg>${url_da_pagina}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2025-06-22T04:57:40.136741" elapsed="0.020393"/>
+</kw>
+<arg>https://only-cursos.vercel.app/cadastro</arg>
+<status status="PASS" start="2025-06-22T04:57:40.136071" elapsed="0.021217"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-06-22T04:57:40.157511" elapsed="2.462054"/>
+</kw>
+<status status="PASS" start="2025-06-22T04:57:40.135304" elapsed="2.484467"/>
+</kw>
+<status status="PASS" start="2025-06-22T04:57:34.983558" elapsed="7.636862"/>
+</test>
+<status status="PASS" start="2025-06-22T04:57:32.380822" elapsed="10.241100"/>
+</suite>
+<suite id="s1-s3" name="HU03 Iniciar Recuperacao de Senha" source="C:\Users\Helio\Desktop\Estudos\Python\Only-Cursos\frontend\Tests\HU03_Iniciar_Recuperacao_de_Senha.robot">
+<kw name="Abrir Navegador" owner="CommosResource" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-06-22T04:57:42.642479" level="INFO">Opening browser 'chrome' to base url 'https://only-cursos.vercel.app/'.</msg>
+<arg>${LinkNavegador}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-06-22T04:57:42.642220" elapsed="4.247195"/>
+</kw>
+<status status="PASS" start="2025-06-22T04:57:42.641839" elapsed="4.247883"/>
+</kw>
+<test id="s1-s3-t1" name="CN01 - Navegação para a recuperação de senha" line="6">
+<kw name="Dado que o usuário acessa a tela de login" owner="HU03_Iniciar_Recuperacao_de_Senha_Resource">
+<kw name="acessar login" owner="CommosResource">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${BotaoEntrar}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-06-22T04:57:46.900587" elapsed="0.121368"/>
+</kw>
+<kw name="Set Focus To Element" owner="SeleniumLibrary">
+<arg>${BotaoEntrar}</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-22T04:57:47.022293" elapsed="0.093252"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-06-22T04:57:47.116181" level="INFO">Clicking element 'xpath=/html/body/div/nav/div[1]/ul/li[4]/a'.</msg>
+<arg>${BotaoEntrar}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-22T04:57:47.115842" elapsed="0.670556"/>
+</kw>
+<status status="PASS" start="2025-06-22T04:57:46.900044" elapsed="0.886569"/>
+</kw>
+<status status="PASS" start="2025-06-22T04:57:46.898931" elapsed="0.887810"/>
+</kw>
+<kw name="E não se lembra da sua senha" owner="HU03_Iniciar_Recuperacao_de_Senha_Resource">
+<kw name="preencher campo email" owner="CommosResource">
+<kw name="Set Focus To Element" owner="SeleniumLibrary">
+<arg>${Login_Input_Email}</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-22T04:57:47.792817" elapsed="0.145174"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-22T04:57:47.938672" level="INFO">Typing text 'perfilteste1@gmail.com' into text field 'xpath=/html/body/div/div/form/div[1]/input'.</msg>
+<arg>${Login_Input_Email}</arg>
+<arg>${Email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-22T04:57:47.938285" elapsed="0.256736"/>
+</kw>
+<arg>perfilteste1@gmail.com</arg>
+<status status="PASS" start="2025-06-22T04:57:47.792122" elapsed="0.403074"/>
+</kw>
+<status status="PASS" start="2025-06-22T04:57:47.791443" elapsed="0.403879"/>
+</kw>
+<kw name="Quando ele clica no link &quot;Esqueci minha senha&quot;" owner="HU03_Iniciar_Recuperacao_de_Senha_Resource">
+<kw name="ir para a pagina de reuperar senha" owner="HU03_Iniciar_Recuperacao_de_Senha_Resource">
+<kw name="Set Focus To Element" owner="SeleniumLibrary">
+<arg>${Login_link_para_Recupera_Senha}</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-22T04:57:48.197167" elapsed="0.052389"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-06-22T04:57:48.250505" level="INFO">Clicking element 'xpath=/html/body/div/div/div/p[1]/a'.</msg>
+<arg>${Login_link_para_Recupera_Senha}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-22T04:57:48.249975" elapsed="0.268485"/>
+</kw>
+<status status="PASS" start="2025-06-22T04:57:48.196680" elapsed="0.322072"/>
+</kw>
+<status status="PASS" start="2025-06-22T04:57:48.196110" elapsed="0.322779"/>
+</kw>
+<kw name="Então o sistema deve direcioná-lo para a tela de recuperação de senha" owner="HU03_Iniciar_Recuperacao_de_Senha_Resource">
+<kw name="Validar Que Estou Na Pagina" owner="CommosResource">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2025-06-22T04:57:48.535991" level="INFO">Current location is 'https://only-cursos.vercel.app/recuperar-senha'.</msg>
+<arg>${url_da_pagina}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2025-06-22T04:57:48.522107" elapsed="0.014083"/>
+</kw>
+<arg>10s</arg>
+<arg>1s</arg>
+<arg>Location Should Be</arg>
+<arg>${url_da_pagina}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2025-06-22T04:57:48.521295" elapsed="0.015089"/>
+</kw>
+<arg>https://only-cursos.vercel.app/recuperar-senha</arg>
+<status status="PASS" start="2025-06-22T04:57:48.520568" elapsed="0.016045"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-06-22T04:57:48.537024" elapsed="2.651903"/>
+</kw>
+<status status="PASS" start="2025-06-22T04:57:48.519594" elapsed="2.670196"/>
+</kw>
+<status status="PASS" start="2025-06-22T04:57:46.889907" elapsed="4.302563"/>
+</test>
+<status status="PASS" start="2025-06-22T04:57:42.624271" elapsed="8.575784"/>
+</suite>
+<suite id="s1-s4" name="HU04 Sair do Sistema" source="C:\Users\Helio\Desktop\Estudos\Python\Only-Cursos\frontend\Tests\HU04_Sair_do_Sistema.robot">
+<kw name="Abrir Navegador" owner="CommosResource" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-06-22T04:57:51.228216" level="INFO">Opening browser 'chrome' to base url 'https://only-cursos.vercel.app/'.</msg>
+<arg>${LinkNavegador}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-06-22T04:57:51.227977" elapsed="4.601727"/>
+</kw>
+<status status="PASS" start="2025-06-22T04:57:51.227513" elapsed="4.602422"/>
+</kw>
+<test id="s1-s4-t1" name="CN01 - Logout bem-sucedido" line="6">
+<kw name="Dado que o usuário está logado no sistema" owner="HU04_Sair_do_Sistema_Resource">
+<kw name="acessar login" owner="CommosResource">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${BotaoEntrar}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-06-22T04:57:55.876940" elapsed="0.315655"/>
+</kw>
+<kw name="Set Focus To Element" owner="SeleniumLibrary">
+<arg>${BotaoEntrar}</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-22T04:57:56.192961" elapsed="0.151148"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-06-22T04:57:56.344830" level="INFO">Clicking element 'xpath=/html/body/div/nav/div[1]/ul/li[4]/a'.</msg>
+<arg>${BotaoEntrar}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-22T04:57:56.344474" elapsed="0.618370"/>
+</kw>
+<status status="PASS" start="2025-06-22T04:57:55.876272" elapsed="1.086824"/>
+</kw>
+<kw name="Validar Que Estou Na Pagina" owner="CommosResource">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2025-06-22T04:57:56.978293" level="INFO">Current location is 'https://only-cursos.vercel.app/login'.</msg>
+<arg>${url_da_pagina}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2025-06-22T04:57:56.965105" elapsed="0.013348"/>
+</kw>
+<arg>10s</arg>
+<arg>1s</arg>
+<arg>Location Should Be</arg>
+<arg>${url_da_pagina}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2025-06-22T04:57:56.964604" elapsed="0.013986"/>
+</kw>
+<arg>https://only-cursos.vercel.app/login</arg>
+<status status="PASS" start="2025-06-22T04:57:56.963484" elapsed="0.015255"/>
+</kw>
+<kw name="preencher campo email" owner="CommosResource">
+<kw name="Set Focus To Element" owner="SeleniumLibrary">
+<arg>${Login_Input_Email}</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-22T04:57:56.979605" elapsed="0.054942"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-22T04:57:57.035396" level="INFO">Typing text 'perfilteste1@gmail.com' into text field 'xpath=/html/body/div/div/form/div[1]/input'.</msg>
+<arg>${Login_Input_Email}</arg>
+<arg>${Email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-22T04:57:57.034960" elapsed="0.219722"/>
+</kw>
+<arg>perfilteste1@gmail.com</arg>
+<status status="PASS" start="2025-06-22T04:57:56.979007" elapsed="0.276004"/>
+</kw>
+<kw name="preencher campo senha" owner="HU01_Autenticar_Usuario_Resource">
+<kw name="Set Focus To Element" owner="SeleniumLibrary">
+<arg>${Login_Input_Email}</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-22T04:57:57.256284" elapsed="0.013419"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-22T04:57:57.270144" level="INFO">Typing text 'perfilteste1@' into text field 'xpath=//*[@id="senha"]'.</msg>
+<arg>${Login_Input_Senha}</arg>
+<arg>${Senha}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-22T04:57:57.269896" elapsed="0.117746"/>
+</kw>
+<arg>perfilteste1@</arg>
+<status status="PASS" start="2025-06-22T04:57:57.255281" elapsed="0.132689"/>
+</kw>
+<kw name="logar" owner="HU01_Autenticar_Usuario_Resource">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-06-22T04:57:57.389920" level="INFO">Clicking element 'xpath=/html/body/div/div/form/button'.</msg>
+<arg>${Login_Botao_Entrar}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-22T04:57:57.389486" elapsed="0.084956"/>
+</kw>
+<status status="PASS" start="2025-06-22T04:57:57.388623" elapsed="0.086074"/>
+</kw>
+<status status="PASS" start="2025-06-22T04:57:55.874940" elapsed="1.599897"/>
+</kw>
+<kw name="E acessa o menu principal" owner="HU04_Sair_do_Sistema_Resource">
+<kw name="Validar Que Estou Na Pagina" owner="CommosResource">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2025-06-22T04:57:57.683132" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-204.png"&gt;&lt;img src="selenium-screenshot-204.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-06-22T04:57:57.683359" level="FAIL">Location should have been 'https://only-cursos.vercel.app/aluno' but was 'https://only-cursos.vercel.app/login'.</msg>
+<arg>${url_da_pagina}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="FAIL" start="2025-06-22T04:57:57.477999" elapsed="0.206353">Location should have been 'https://only-cursos.vercel.app/aluno' but was 'https://only-cursos.vercel.app/login'.</status>
+</kw>
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2025-06-22T04:57:58.696344" level="INFO">Current location is 'https://only-cursos.vercel.app/aluno'.</msg>
+<arg>${url_da_pagina}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2025-06-22T04:57:58.685848" elapsed="0.010668"/>
+</kw>
+<arg>10s</arg>
+<arg>1s</arg>
+<arg>Location Should Be</arg>
+<arg>${url_da_pagina}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2025-06-22T04:57:57.477711" elapsed="1.219151"/>
+</kw>
+<arg>https://only-cursos.vercel.app/aluno</arg>
+<status status="PASS" start="2025-06-22T04:57:57.477270" elapsed="1.219866"/>
+</kw>
+<status status="PASS" start="2025-06-22T04:57:57.476722" elapsed="1.220578"/>
+</kw>
+<kw name="Quando ele clica na opção &quot;Sair&quot;" owner="HU04_Sair_do_Sistema_Resource">
+<kw name="Deslogar usuario" owner="CommosResource">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-06-22T04:57:58.700657" level="INFO">Clicking element 'xpath=/html/body/div/div/nav/div/div[2]/button'.</msg>
+<arg>${Home_Botao_Sair}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-22T04:57:58.700311" elapsed="0.210392"/>
+</kw>
+<status status="PASS" start="2025-06-22T04:57:58.699806" elapsed="0.211226"/>
+</kw>
+<status status="PASS" start="2025-06-22T04:57:58.698485" elapsed="0.212644"/>
+</kw>
+<kw name="Então o sistema deve encerrar sua sessão e redirecioná-lo para a tela de login" owner="HU04_Sair_do_Sistema_Resource">
+<kw name="Validar Que Estou Na Pagina" owner="CommosResource">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2025-06-22T04:57:58.925329" level="INFO">Current location is 'https://only-cursos.vercel.app/login'.</msg>
+<arg>${url_da_pagina}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2025-06-22T04:57:58.915847" elapsed="0.009634"/>
+</kw>
+<arg>10s</arg>
+<arg>1s</arg>
+<arg>Location Should Be</arg>
+<arg>${url_da_pagina}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2025-06-22T04:57:58.915214" elapsed="0.010430"/>
+</kw>
+<arg>https://only-cursos.vercel.app/login</arg>
+<status status="PASS" start="2025-06-22T04:57:58.914461" elapsed="0.011377"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-06-22T04:57:58.926050" elapsed="3.057138"/>
+</kw>
+<status status="PASS" start="2025-06-22T04:57:58.912119" elapsed="3.071511"/>
+</kw>
+<status status="PASS" start="2025-06-22T04:57:55.830111" elapsed="6.154632"/>
+</test>
+<status status="PASS" start="2025-06-22T04:57:51.208786" elapsed="10.779962"/>
+</suite>
+<suite id="s1-s5" name="HU05 Visualizar a Pagina Inicial" source="C:\Users\Helio\Desktop\Estudos\Python\Only-Cursos\frontend\Tests\HU05_Visualizar_a_Pagina_Inicial.robot">
+<kw name="Abrir Navegador" owner="CommosResource" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-06-22T04:58:02.022621" level="INFO">Opening browser 'chrome' to base url 'https://only-cursos.vercel.app/'.</msg>
+<arg>${LinkNavegador}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-06-22T04:58:02.022411" elapsed="4.778447"/>
+</kw>
+<status status="PASS" start="2025-06-22T04:58:02.022151" elapsed="4.779197"/>
+</kw>
+<test id="s1-s5-t1" name="CN01 - Visualização da dashboard" line="6">
+<kw name="Dado que o usuário fez login com sucesso" owner="HU05_Visualizar_a_Pagina_InicialResource">
+<kw name="acessar login" owner="CommosResource">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${BotaoEntrar}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-06-22T04:58:06.817267" elapsed="0.162544"/>
+</kw>
+<kw name="Set Focus To Element" owner="SeleniumLibrary">
+<arg>${BotaoEntrar}</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-22T04:58:06.980475" elapsed="0.132504"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-06-22T04:58:07.113761" level="INFO">Clicking element 'xpath=/html/body/div/nav/div[1]/ul/li[4]/a'.</msg>
+<arg>${BotaoEntrar}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-22T04:58:07.113323" elapsed="0.622235"/>
+</kw>
+<status status="PASS" start="2025-06-22T04:58:06.816721" elapsed="0.919074"/>
+</kw>
+<kw name="preencher campo email" owner="CommosResource">
+<kw name="Set Focus To Element" owner="SeleniumLibrary">
+<arg>${Login_Input_Email}</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-22T04:58:07.737143" elapsed="0.044762"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-22T04:58:07.783047" level="INFO">Typing text 'perfilteste1@gmail.com' into text field 'xpath=/html/body/div/div/form/div[1]/input'.</msg>
+<arg>${Login_Input_Email}</arg>
+<arg>${Email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-22T04:58:07.782470" elapsed="0.282655"/>
+</kw>
+<arg>${User_Email}</arg>
+<status status="PASS" start="2025-06-22T04:58:07.736263" elapsed="0.329123"/>
+</kw>
+<kw name="preencher campo senha" owner="HU01_Autenticar_Usuario_Resource">
+<kw name="Set Focus To Element" owner="SeleniumLibrary">
+<arg>${Login_Input_Email}</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-22T04:58:08.066421" elapsed="0.018663"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-22T04:58:08.085523" level="INFO">Typing text 'perfilteste1@' into text field 'xpath=//*[@id="senha"]'.</msg>
+<arg>${Login_Input_Senha}</arg>
+<arg>${Senha}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-22T04:58:08.085275" elapsed="0.124460"/>
+</kw>
+<arg>${User_Senha}</arg>
+<status status="PASS" start="2025-06-22T04:58:08.065833" elapsed="0.144484"/>
+</kw>
+<kw name="logar" owner="HU01_Autenticar_Usuario_Resource">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-06-22T04:58:08.211984" level="INFO">Clicking element 'xpath=/html/body/div/div/form/button'.</msg>
+<arg>${Login_Botao_Entrar}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-22T04:58:08.211716" elapsed="0.089660"/>
+</kw>
+<status status="PASS" start="2025-06-22T04:58:08.211113" elapsed="0.090483"/>
+</kw>
+<status status="PASS" start="2025-06-22T04:58:06.815960" elapsed="1.485776"/>
+</kw>
+<kw name="Quando é direcionado para a tela inicial" owner="HU05_Visualizar_a_Pagina_InicialResource">
+<kw name="Validar Que Estou Na Pagina" owner="CommosResource">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2025-06-22T04:58:08.646840" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-205.png"&gt;&lt;img src="selenium-screenshot-205.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-06-22T04:58:08.647116" level="FAIL">Location should have been 'https://only-cursos.vercel.app/aluno' but was 'https://only-cursos.vercel.app/login'.</msg>
+<arg>${url_da_pagina}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="FAIL" start="2025-06-22T04:58:08.310067" elapsed="0.338234">Location should have been 'https://only-cursos.vercel.app/aluno' but was 'https://only-cursos.vercel.app/login'.</status>
+</kw>
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2025-06-22T04:58:09.664269" level="INFO">Current location is 'https://only-cursos.vercel.app/aluno'.</msg>
+<arg>${url_da_pagina}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2025-06-22T04:58:09.650045" elapsed="0.014508"/>
+</kw>
+<arg>10s</arg>
+<arg>1s</arg>
+<arg>Location Should Be</arg>
+<arg>${url_da_pagina}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2025-06-22T04:58:08.309494" elapsed="1.355430"/>
+</kw>
+<arg>https://only-cursos.vercel.app/aluno</arg>
+<status status="PASS" start="2025-06-22T04:58:08.308379" elapsed="1.357367"/>
+</kw>
+<status status="PASS" start="2025-06-22T04:58:08.307268" elapsed="1.358619"/>
+</kw>
+<kw name="Então o sistema deve exibir o nome do usuário" owner="HU05_Visualizar_a_Pagina_InicialResource">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Home_Nome_do_Usuario}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-06-22T04:58:09.667240" elapsed="0.023959"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-06-22T04:58:12.693061" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-06-22T04:58:09.691448" elapsed="3.002095"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-06-22T04:58:12.732859" level="INFO">${Text} = Xamuel Tester</msg>
+<var>${Text}</var>
+<arg>${Home_Nome_do_Usuario}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-22T04:58:12.694255" elapsed="0.038653"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${Text}</arg>
+<arg>${User_Nome}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2025-06-22T04:58:12.733098" elapsed="0.000264"/>
+</kw>
+<status status="PASS" start="2025-06-22T04:58:09.666606" elapsed="3.066851"/>
+</kw>
+<kw name="E uma lista com titulo &quot;Meus cursos&quot;" owner="HU05_Visualizar_a_Pagina_InicialResource">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Home_Titulo_da_Lista_Meus_Cursos}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-06-22T04:58:12.734207" elapsed="0.021882"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-06-22T04:58:12.778151" level="INFO">${Text} = Meus Cursos</msg>
+<var>${Text}</var>
+<arg>${Home_Titulo_da_Lista_Meus_Cursos}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-22T04:58:12.756432" elapsed="0.021764"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${Text}</arg>
+<arg>Meus Cursos</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2025-06-22T04:58:12.778384" elapsed="0.000215"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-06-22T04:58:12.778728" elapsed="2.924979"/>
+</kw>
+<status status="PASS" start="2025-06-22T04:58:12.733905" elapsed="2.970174"/>
+</kw>
+<status status="PASS" start="2025-06-22T04:58:06.801552" elapsed="8.903645"/>
+</test>
+<status status="PASS" start="2025-06-22T04:58:01.992686" elapsed="13.715458"/>
+</suite>
+<suite id="s1-s6" name="HU13 Gerenciar Dados Pessoais" source="C:\Users\Helio\Desktop\Estudos\Python\Only-Cursos\frontend\Tests\HU13_Gerenciar_Dados_Pessoais.robot">
+<kw name="Abrir Navegador" owner="CommosResource" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-06-22T04:58:15.944972" level="INFO">Opening browser 'chrome' to base url 'https://only-cursos.vercel.app/'.</msg>
+<arg>${LinkNavegador}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-06-22T04:58:15.944741" elapsed="5.044407"/>
+</kw>
+<status status="PASS" start="2025-06-22T04:58:15.944444" elapsed="5.045015"/>
+</kw>
+<test id="s1-s6-t1" name="CN01- Edição de campo bem-sucedida" line="6">
+<kw name="Dado que o usuário está na página &quot;Meus Dados&quot;" owner="HU13_Gerenciar_Dados_Pessoais_Resource">
+<kw name="acessar login" owner="CommosResource">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${BotaoEntrar}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-06-22T04:58:21.113577" elapsed="0.292490"/>
+</kw>
+<kw name="Set Focus To Element" owner="SeleniumLibrary">
+<arg>${BotaoEntrar}</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-22T04:58:21.406376" elapsed="0.100295"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-06-22T04:58:21.507624" level="INFO">Clicking element 'xpath=/html/body/div/nav/div[1]/ul/li[4]/a'.</msg>
+<arg>${BotaoEntrar}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-22T04:58:21.507190" elapsed="0.504888"/>
+</kw>
+<status status="PASS" start="2025-06-22T04:58:21.106535" elapsed="0.905732"/>
+</kw>
+<kw name="preencher campo email" owner="CommosResource">
+<kw name="Set Focus To Element" owner="SeleniumLibrary">
+<arg>${Login_Input_Email}</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-22T04:58:22.013777" elapsed="0.042379"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-22T04:58:22.057085" level="INFO">Typing text 'perfilteste1@gmail.com' into text field 'xpath=/html/body/div/div/form/div[1]/input'.</msg>
+<arg>${Login_Input_Email}</arg>
+<arg>${Email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-22T04:58:22.056545" elapsed="0.305845"/>
+</kw>
+<arg>perfilteste1@gmail.com</arg>
+<status status="PASS" start="2025-06-22T04:58:22.012543" elapsed="0.350098"/>
+</kw>
+<kw name="preencher campo senha" owner="HU01_Autenticar_Usuario_Resource">
+<kw name="Set Focus To Element" owner="SeleniumLibrary">
+<arg>${Login_Input_Email}</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-22T04:58:22.363522" elapsed="0.042452"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-22T04:58:22.406644" level="INFO">Typing text 'perfilteste1@' into text field 'xpath=//*[@id="senha"]'.</msg>
+<arg>${Login_Input_Senha}</arg>
+<arg>${Senha}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-22T04:58:22.406270" elapsed="0.122120"/>
+</kw>
+<arg>perfilteste1@</arg>
+<status status="PASS" start="2025-06-22T04:58:22.363119" elapsed="0.165456"/>
+</kw>
+<kw name="logar" owner="HU01_Autenticar_Usuario_Resource">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-06-22T04:58:22.530141" level="INFO">Clicking element 'xpath=/html/body/div/div/form/button'.</msg>
+<arg>${Login_Botao_Entrar}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-22T04:58:22.529699" elapsed="0.089225"/>
+</kw>
+<status status="PASS" start="2025-06-22T04:58:22.529104" elapsed="0.090011"/>
+</kw>
+<kw name="Validar Que Estou Na Pagina" owner="CommosResource">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2025-06-22T04:58:22.843733" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-206.png"&gt;&lt;img src="selenium-screenshot-206.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-06-22T04:58:22.844135" level="FAIL">Location should have been 'https://only-cursos.vercel.app/aluno' but was 'https://only-cursos.vercel.app/login'.</msg>
+<arg>${url_da_pagina}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="FAIL" start="2025-06-22T04:58:22.620189" elapsed="0.225286">Location should have been 'https://only-cursos.vercel.app/aluno' but was 'https://only-cursos.vercel.app/login'.</status>
+</kw>
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2025-06-22T04:58:23.870129" level="INFO">Current location is 'https://only-cursos.vercel.app/aluno'.</msg>
+<arg>${url_da_pagina}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2025-06-22T04:58:23.846245" elapsed="0.024329"/>
+</kw>
+<arg>10s</arg>
+<arg>1s</arg>
+<arg>Location Should Be</arg>
+<arg>${url_da_pagina}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2025-06-22T04:58:22.619813" elapsed="1.253270"/>
+</kw>
+<arg>https://only-cursos.vercel.app/aluno</arg>
+<status status="PASS" start="2025-06-22T04:58:22.619362" elapsed="1.254274"/>
+</kw>
+<kw name="acessar tela Meus dados" owner="CommosResource">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Menu_Meus_Dados}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-06-22T04:58:23.876116" elapsed="0.037749"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-06-22T04:58:23.914561" level="INFO">Clicking element 'xpath=/html/body/div/div/nav/div/ul/li[4]/a/span[2]'.</msg>
+<arg>${Menu_Meus_Dados}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-22T04:58:23.914176" elapsed="0.262810"/>
+</kw>
+<status status="PASS" start="2025-06-22T04:58:23.874539" elapsed="0.302712"/>
+</kw>
+<kw name="Validar Que Estou Na Pagina" owner="CommosResource">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2025-06-22T04:58:24.194971" level="INFO">Current location is 'https://only-cursos.vercel.app/dados'.</msg>
+<arg>${url_da_pagina}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2025-06-22T04:58:24.179172" elapsed="0.015944"/>
+</kw>
+<arg>10s</arg>
+<arg>1s</arg>
+<arg>Location Should Be</arg>
+<arg>${url_da_pagina}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2025-06-22T04:58:24.178544" elapsed="0.016838"/>
+</kw>
+<arg>https://only-cursos.vercel.app/dados</arg>
+<status status="PASS" start="2025-06-22T04:58:24.177641" elapsed="0.017856"/>
+</kw>
+<status status="PASS" start="2025-06-22T04:58:21.105746" elapsed="3.089872"/>
+</kw>
+<kw name="E identifica o campo &quot;Profissão&quot; disponível para edição" owner="HU13_Gerenciar_Dados_Pessoais_Resource">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Meus_Dados_Campo_Profissao}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-06-22T04:58:24.197330" elapsed="0.052793"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Meus_Dados_Botao_editar_profissao}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-06-22T04:58:24.250463" elapsed="0.022223"/>
+</kw>
+<status status="PASS" start="2025-06-22T04:58:24.196394" elapsed="0.076460"/>
+</kw>
+<kw name="Quando ele clica em &quot;Editar&quot;, altera o valor e salva" owner="HU13_Gerenciar_Dados_Pessoais_Resource">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-06-22T04:58:29.275509" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-06-22T04:58:24.274663" elapsed="5.001166"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Meus_Dados_Profissao_atual}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-06-22T04:58:29.276435" elapsed="0.046495"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-06-22T04:58:29.349248" level="INFO">${Profissao} = Designer</msg>
+<var>${Profissao}</var>
+<arg>${Meus_Dados_Profissao_atual}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-22T04:58:29.323209" elapsed="0.026107"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${Profissao}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-06-22T04:58:29.350076" elapsed="0.000608"/>
+</kw>
+<if>
+<branch type="IF" condition="'${Profissao}' == 'Progamador'">
+<kw name="Set Focus To Element" owner="SeleniumLibrary">
+<arg>${Meus_Dados_Botao_editar_profissao}</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-06-22T04:58:29.360826" elapsed="0.000092"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>${Meus_Dados_Botao_editar_profissao}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-06-22T04:58:29.361285" elapsed="0.000058"/>
+</kw>
+<kw name="Set Focus To Element" owner="SeleniumLibrary">
+<arg>${Meus_Dados_Input_Editar_profissao}</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-06-22T04:58:29.361598" elapsed="0.000067"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>${Meus_Dados_Input_Editar_profissao}</arg>
+<arg>Designer</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-06-22T04:58:29.361817" elapsed="0.000032"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<arg>${Meus_Dados_Salvar_Edicao_de_profissao}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-06-22T04:58:29.361978" elapsed="0.000033"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2025-06-22T04:58:29.362183" elapsed="0.000050"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Meus_Dados_Profissao_atual}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2025-06-22T04:58:29.362468" elapsed="0.000058"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<var>${NovaProfissao}</var>
+<arg>${Meus_Dados_Profissao_atual}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-06-22T04:58:29.362776" elapsed="0.000058"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${NovaProfissao}</arg>
+<arg>Designer</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="NOT RUN" start="2025-06-22T04:58:29.363504" elapsed="0.000060"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<var>${Profissao}</var>
+<arg>Designer</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" start="2025-06-22T04:58:29.363890" elapsed="0.000067"/>
+</kw>
+<status status="NOT RUN" start="2025-06-22T04:58:29.351397" elapsed="0.012661"/>
+</branch>
+<branch type="ELSE">
+<kw name="Set Focus To Element" owner="SeleniumLibrary">
+<arg>${Meus_Dados_Botao_editar_profissao}</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-22T04:58:29.364460" elapsed="0.025201"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-06-22T04:58:29.390084" level="INFO">Clicking element 'xpath=/html/body/div/main/div/div[2]/div[6]/div[2]/button'.</msg>
+<arg>${Meus_Dados_Botao_editar_profissao}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-22T04:58:29.389858" elapsed="0.101546"/>
+</kw>
+<kw name="Set Focus To Element" owner="SeleniumLibrary">
+<arg>${Meus_Dados_Input_Editar_profissao}</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-22T04:58:29.491607" elapsed="0.028021"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-22T04:58:29.520576" level="INFO">Typing text 'Progamador' into text field 'xpath=/html/body/div/div[2]/div/input'.</msg>
+<arg>${Meus_Dados_Input_Editar_profissao}</arg>
+<arg>Progamador</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-22T04:58:29.519992" elapsed="0.154769"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-06-22T04:58:29.675802" level="INFO">Clicking button 'xpath=/html/body/div/div[2]/div/div/button[2]'.</msg>
+<arg>${Meus_Dados_Salvar_Edicao_de_profissao}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-22T04:58:29.675270" elapsed="0.080852"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-06-22T04:58:32.757229" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-06-22T04:58:29.756390" elapsed="3.001039"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Meus_Dados_Profissao_atual}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-06-22T04:58:32.757791" elapsed="0.032963"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-06-22T04:58:32.815924" level="INFO">${NovaProfissao} = Progamador</msg>
+<var>${NovaProfissao}</var>
+<arg>${Meus_Dados_Profissao_atual}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-22T04:58:32.791116" elapsed="0.024906"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${NovaProfissao}</arg>
+<arg>Progamador</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2025-06-22T04:58:32.816364" elapsed="0.000396"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-06-22T04:58:32.817444" level="INFO">${Profissao} = Progamador</msg>
+<var>${Profissao}</var>
+<arg>Progamador</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-06-22T04:58:32.817089" elapsed="0.000416"/>
+</kw>
+<status status="PASS" start="2025-06-22T04:58:29.364171" elapsed="3.453454"/>
+</branch>
+<status status="PASS" start="2025-06-22T04:58:29.351336" elapsed="3.466388"/>
+</if>
+<kw name="Set Global Variable" owner="BuiltIn">
+<msg time="2025-06-22T04:58:32.819270" level="INFO">${Profissao} = Progamador</msg>
+<arg>${Profissao}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<status status="PASS" start="2025-06-22T04:58:32.818337" elapsed="0.001094"/>
+</kw>
+<status status="PASS" start="2025-06-22T04:58:24.274117" elapsed="8.545509"/>
+</kw>
+<kw name="Então o novo valor deve ser exibido no campo" owner="HU13_Gerenciar_Dados_Pessoais_Resource">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-06-22T04:58:36.821697" level="INFO">Slept 4 seconds.</msg>
+<arg>4s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-06-22T04:58:32.820962" elapsed="4.001130"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Meus_Dados_Profissao_atual}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-06-22T04:58:36.822831" elapsed="0.060081"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-06-22T04:58:36.921570" level="INFO">${Meus_Dados_Profissao_atual_text} = Progamador</msg>
+<var>${Meus_Dados_Profissao_atual_text}</var>
+<arg>${Meus_Dados_Profissao_atual}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-22T04:58:36.883632" elapsed="0.037995"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${Meus_Dados_Profissao_atual_text}</arg>
+<arg>${Profissao}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2025-06-22T04:58:36.921882" elapsed="0.000622"/>
+</kw>
+<status status="PASS" start="2025-06-22T04:58:32.820371" elapsed="4.102306"/>
+</kw>
+<status status="PASS" start="2025-06-22T04:58:20.989651" elapsed="15.933459"/>
+</test>
+<test id="s1-s6-t2" name="CN02 - Tentativa de editar campo inalterável" line="11">
+<kw name="Dado que o usuário já está na página &quot;Meus Dados&quot;" owner="HU13_Gerenciar_Dados_Pessoais_Resource">
+<kw name="acessar tela Meus dados" owner="CommosResource">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Menu_Meus_Dados}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-06-22T04:58:36.925781" elapsed="0.017870"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-06-22T04:58:36.944259" level="INFO">Clicking element 'xpath=/html/body/div/div/nav/div/ul/li[4]/a/span[2]'.</msg>
+<arg>${Menu_Meus_Dados}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-22T04:58:36.943928" elapsed="0.313343"/>
+</kw>
+<status status="PASS" start="2025-06-22T04:58:36.925516" elapsed="0.331909"/>
+</kw>
+<kw name="Validar Que Estou Na Pagina" owner="CommosResource">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2025-06-22T04:58:37.267223" level="INFO">Current location is 'https://only-cursos.vercel.app/dados'.</msg>
+<arg>${url_da_pagina}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2025-06-22T04:58:37.259575" elapsed="0.007777"/>
+</kw>
+<arg>10s</arg>
+<arg>1s</arg>
+<arg>Location Should Be</arg>
+<arg>${url_da_pagina}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2025-06-22T04:58:37.258851" elapsed="0.008630"/>
+</kw>
+<arg>https://only-cursos.vercel.app/dados</arg>
+<status status="PASS" start="2025-06-22T04:58:37.257865" elapsed="0.009765"/>
+</kw>
+<status status="PASS" start="2025-06-22T04:58:36.925099" elapsed="0.342640"/>
+</kw>
+<kw name="Quando ele visualiza o campo &quot;CPF&quot;" owner="HU13_Gerenciar_Dados_Pessoais_Resource">
+<kw name="validar se existe campo CPF" owner="HU13_Gerenciar_Dados_Pessoais_Resource">
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-06-22T04:58:37.306278" level="INFO">${text} = Cpf</msg>
+<var>${text}</var>
+<arg>${Meus_Dados_Identificdor_do_Campo_CPF}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-22T04:58:37.268829" elapsed="0.037497"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${text}</arg>
+<arg>Cpf</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2025-06-22T04:58:37.306506" elapsed="0.000234"/>
+</kw>
+<status status="PASS" start="2025-06-22T04:58:37.268568" elapsed="0.038290"/>
+</kw>
+<status status="PASS" start="2025-06-22T04:58:37.268205" elapsed="0.038718"/>
+</kw>
+<kw name="Então o campo &quot;CPF&quot; deve estar marcado como inalterável" owner="HU13_Gerenciar_Dados_Pessoais_Resource">
+<kw name="validar e inalteravel" owner="HU13_Gerenciar_Dados_Pessoais_Resource">
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-06-22T04:58:37.335707" level="INFO">${text} = Inalterável</msg>
+<var>${text}</var>
+<arg>${Meus_Dados__Campo_CPF_Inalteravel}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-22T04:58:37.310259" elapsed="0.025543"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${text}</arg>
+<arg>Inalterável</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2025-06-22T04:58:37.336203" elapsed="0.000749"/>
+</kw>
+<status status="PASS" start="2025-06-22T04:58:37.308421" elapsed="0.028724"/>
+</kw>
+<status status="PASS" start="2025-06-22T04:58:37.307347" elapsed="0.029950"/>
+</kw>
+<status status="PASS" start="2025-06-22T04:58:36.924356" elapsed="0.413459"/>
+</test>
+<status status="PASS" start="2025-06-22T04:58:15.711730" elapsed="21.627094"/>
+</suite>
+<status status="PASS" start="2025-06-22T04:57:18.384716" elapsed="78.955403"/>
+</suite>
+<statistics>
+<total>
+<stat pass="8" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="8" fail="0" skip="0" id="s1" name="Tests">Tests</stat>
+<stat pass="2" fail="0" skip="0" id="s1-s1" name="HU01 Autenticar Usuario">Tests.HU01 Autenticar Usuario</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s2" name="HU02 Acessar Tela de Cadastro">Tests.HU02 Acessar Tela de Cadastro</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s3" name="HU03 Iniciar Recuperacao de Senha">Tests.HU03 Iniciar Recuperacao de Senha</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s4" name="HU04 Sair do Sistema">Tests.HU04 Sair do Sistema</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s5" name="HU05 Visualizar a Pagina Inicial">Tests.HU05 Visualizar a Pagina Inicial</stat>
+<stat pass="2" fail="0" skip="0" id="s1-s6" name="HU13 Gerenciar Dados Pessoais">Tests.HU13 Gerenciar Dados Pessoais</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2025-06-22T04:57:18.855221" level="WARN">Error in file 'C:\Users\Helio\Desktop\Estudos\Python\Only-Cursos\frontend\Resources\Steps\CommosResource.resource' on line 33: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+</errors>
+</robot>

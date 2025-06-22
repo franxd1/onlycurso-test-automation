@@ -10,8 +10,8 @@ Resource    ../Steps/HU01_Autenticar_Usuario_Resource.resource
 Dado que o usuário está logado no sistema
     acessar login
     Validar Que Estou Na Pagina    https://only-cursos.vercel.app/login
-    preencher campo email    isaias.legend@gmail.com
-    preencher campo senha    Isaias123@
+    preencher campo email    perfilteste1@gmail.com
+    preencher campo senha    perfilteste1@
     logar
 
 
